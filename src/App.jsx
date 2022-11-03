@@ -32,7 +32,6 @@ function App() {
     if (lat && lon) {
       data = `lat=${lat}&lon=${lon}`
     } else {
-      let city = document.querySelector('#city').value
       data = `q=${city}`
     }
     axios.get(`https://api.openweathermap.org/data/2.5/weather?${data}&appid=${apiKey}&units=metric`)
