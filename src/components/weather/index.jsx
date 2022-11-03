@@ -1,6 +1,6 @@
 import moment from 'moment/moment'
 import './index.css'
-let Weather = ({city,date,temp}) => {
+let Weather = ({city,date,temp,icon}) => {
     return<>
     <div className="widget">
             
@@ -12,7 +12,8 @@ let Weather = ({city,date,temp}) => {
                     {city}
                 </div>
                 <div className="temp">
-                   {/* <img src="https://codefrog.tech/cp/wp/ts.png" alt="" width="60"> */}
+                    <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt="pic" />
+                   {/* <img src="https://codefrog.tech/cp/wp/ts.png" alt="pic" width="60"> */}
                    {temp}&deg;C
                 </div>
             </div>
